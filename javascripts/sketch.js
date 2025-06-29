@@ -17,6 +17,7 @@ function preload() {
 }
 
 const createMask = m => {
+  if(maskLayer) maskLayer.elt.remove();
   maskLayer = createGraphics(gWidth, gHeight);
   maskLayer.background(255);
   maskLayer.erase();
