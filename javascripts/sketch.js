@@ -21,7 +21,7 @@ const createMask = m => {
   maskLayer.background(255);
   maskLayer.erase();
   maskLayer.textFont(font);
-  maskLayer.textSize(( gWidth / 2 ) - ( padd * 4 ));
+  maskLayer.textSize(( gWidth / 2 ) - ( padd * 8 ));
   maskLayer.textAlign(CENTER, CENTER);
   maskLayer.text('1:0', gWidth / 2, ( gHeight / 2 ) + (m?m:0));
   maskLayer.noErase();
