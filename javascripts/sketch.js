@@ -22,9 +22,9 @@ const createMask = m => {
   maskLayer.background(255);
   maskLayer.erase();
   maskLayer.textFont(font);
-  maskLayer.textSize(( gWidth / 2 ) - ( padd * 8 ));
+  maskLayer.textSize(( Math.max( gWidth, gHeight ) / 2 ) - ( padd * 2 ));
   maskLayer.textAlign(CENTER, CENTER);
-  maskLayer.text('1:0', gWidth / 2, ( gHeight / 2 ) + (m?m:0));
+  maskLayer.text('1:0', gWidth / 2, ( ( gHeight / 2 ) - ( padd * 2 ) ) + (m?m:0));
   maskLayer.noErase();
 };
 
@@ -35,11 +35,11 @@ function setup() {
 }
 
 const effector = new Effector({
-  x: padd * 2,
+  x: -(padd * 4),
   y: padd * 2,
-  length: gWidth - ( padd * 4 ),
+  length: gWidth + (padd * 8),
   height: gHeight - (padd  * 4),
-  count: 13,
+  count: 33,
 });
 
 function draw() {
