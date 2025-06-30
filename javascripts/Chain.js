@@ -58,6 +58,7 @@
           segment.x = nextX;
           segment.y = nextY;
         }
+        if(rndInt(1, 100) % 33 === 0) this.angleMutationFactor = rndInt(10, 45);
         segment.angle = rndInt( this.angle - this.angleMutationFactor, this.angle + this.angleMutationFactor);
         nextX = segment.x2;
         nextY = segment.y2;
