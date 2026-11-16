@@ -13,7 +13,7 @@ let maskLayer = null;
 let font = null;
 
 function preload() {
-  font = loadFont('/e24/RobotoSlab-Black.ttf');
+  font = loadFont('./fonts/RobotoSlab-Black.ttf');
 }
 
 const createMask = m => {
